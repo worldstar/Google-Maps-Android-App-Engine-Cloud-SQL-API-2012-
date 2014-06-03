@@ -1,0 +1,18 @@
+<html>
+<head>
+  <title>Show QR code</title>
+	<script type="text/javascript">
+    function bt1Click(){
+	   var textbox1 = document.getElementById('URL').value;
+	   var combinedURL = 'http://chart.apis.google.com/chart?cht=qr&chs=300x225&chl=' + textbox1;
+   	   var imgTag = '<img src="'+combinedURL+'" />';
+	   document.getElementById('canvas').innerHTML = imgTag;	   
+	}    
+    </script>
+</head>
+<body>
+<div id='canvas'></div>
+    URL:<input name="URL" type="text" id="URL" value="http://">
+    <input type="submit" name="bt1" id="bt1" value="Generate QR Code" onClick="bt1Click()">
+</body>
+</html>
